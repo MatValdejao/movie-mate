@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-section {
+    background-image: url("../../images/film-reel.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.input-field input {
+    color: #000;
+    background-color: white;
+    border-color: aqua;
+  }
