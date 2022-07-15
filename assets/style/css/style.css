@@ -16,6 +16,10 @@
     justify-content: left;
 }
 
+.history p {
+    
+}
+
 footer {
    background: var(--primary-background-color);
    background: rgb(232, 229, 229);
