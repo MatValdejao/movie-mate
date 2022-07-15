@@ -1,8 +1,8 @@
 
 
-:root {
+/* :root {
 
-}
+} */
 
 * {
     box-sizing: border-box;
@@ -19,7 +19,7 @@
 footer {
    background: var(--primary-background-color);
    background: rgb(232, 229, 229);
-   padding: ;
+   /* padding: ; */
    text-align: center;
    display: flex;
    flex-wrap: wrap;
