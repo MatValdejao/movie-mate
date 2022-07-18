@@ -35,4 +35,48 @@ header h1 {
 header a {
     color: var(--header-text-color);
     text-decoration: none;
+
+.hero-section {
+    background-image: url("../../images/film-reel.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: overlay;
+    margin-bottom: 0;
+    height: 400px;
+}
+
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+.input-field input {
+    color:white;
+  }
+
+.input-field {
+    margin-top: 30px;
+}
+
+.text-and-input {
+    margin-top: 50px;
+}
+
+.carousel {
+    background-color: rgba(165, 42, 42, 0.4);
+    
+}
+
+.currently-popular {
+    text-align: center;
+    background-color: rgba(165, 42, 42, 0.4);
+    color: black;
+    margin-bottom: 0;
+}
+
+.carousel .carousel-item>img {
+    height: 300px;
+    width: 300px;
 }
