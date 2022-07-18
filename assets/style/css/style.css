@@ -78,3 +78,34 @@ header a {
     height: 300px;
     width: 300px;
 }
+
+.history {
+    /* color: var(--); */
+    display: flexbox;
+    justify-content: left;
+}
+
+.history p {
+    
+}
+
+footer {
+   background: var(--primary-background-color);
+   background: rgb(232, 229, 229);
+   /* padding: ; */
+   text-align: center;
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+
+}
+
+footer h2 {
+    /* color: var(--); */
+    color: var(--header-text-color);
+    color: white;
+    font-size: 36px;
+
+    /* margin: 0; */
+
+}
