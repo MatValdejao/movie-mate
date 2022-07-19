@@ -56,7 +56,7 @@ var displayMovie = function (data2, movie, data) {
     // calls carousel builder functions
     carouselItemOne(movieData, movie);
     carouselItemTwo(movieData, movie);
-    carouselItemThree(movieData, movie);
+    carouselItemThree(reviewData, movie);
     carouselItemFour(movieData, movie);
 };
 
@@ -109,7 +109,7 @@ var carouselItemTwo = function (movieData, movie) {
 	carouselTwoEl.appendChild(plotEl);
 }
 
-var carouselItemThree = function (movieData, movie) {
+var carouselItemThree = function (reviewData, movie) {
     // get carousel element three
 	var carouselThreeEl = document.querySelector(".item3");
 
