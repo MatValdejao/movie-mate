@@ -2,6 +2,7 @@ const apiKey = "1c2cc299";
 var mainContentEl = document.querySelector(".main-content");
 var submitButtonEl = document.getElementById("submit-btn");
 
+
 var retrieveData = function (movie) {
 	var apiURL = "http://www.omdbapi.com/?apikey=" + apiKey + "&t=" + movie;
 
