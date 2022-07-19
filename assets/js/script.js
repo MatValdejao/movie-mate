@@ -1,4 +1,5 @@
 const apiKey = "1c2cc299";
+const apiKey2 = "6EW8DVJ9Y5sGBFMGXfuttZxSHuABvD5A"
 var mainContentEl = document.querySelector(".main-content");
 var submitButtonEl = document.getElementById("submit-btn");
 
@@ -9,11 +10,25 @@ var retrieveData = function (movie) {
 		if (res.ok) {
             res.json().then(function (data) {
                 if (data.Response === "True") {
-                    displayMovie(data, movie);
+                    movieReview(data, movie);
                 } 
                 else {
                     alert(data.Error)
                 }
+			});
+        }
+    }).catch(function (error) {
+        alert("Unable to connect to Movies API")
+    });
+};
+
+var movieReview = function (data2, movie) {
+	var apiURL = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=" + apiKey2 + "&query=" + movie;
+
+	fetch(apiURL).then(function (res) {
+		if (res.ok) {
+            res.json().then(function (data) {
+                displayMovie(data2, movie, data);
 			});
         }
     }).catch(function (error) {
@@ -32,9 +47,11 @@ var getMovie = function (event) {
 	retrieveData(movie);
 };
 
-var displayMovie = function (data, movie) {
+var displayMovie = function (data2, movie, data) {
+    var reviewData = data
+    console.log(reviewData)
 	// get movie data
-    var movieData = data;
+    var movieData = data2;
     
     // calls carousel builder functions
     carouselItemOne(movieData, movie);
@@ -104,13 +121,16 @@ var carouselItemThree = function (movieData, movie) {
 
 	// takes review from other API
 
-	// var movieTitleEl = document.createElement("p");
-	// movieTitleEl.style.color = "black";
-	// movieTitleEl.style.textAlign = "center";
-	// movieTitleEl.textContent = ;
+	 var movieReviewEl = document.createElement("p");
+	 movieReviewEl.style.color = "black";
+	 movieReviewEl.style.textAlign = "center";
+	 movieReviewEl.innerHTML = "<a href=" + reviewData.results[0].link.url + " target = _blank> review to" + movie + "</a>";
+
+     
 
     // append to page
     carouselThreeEl.appendChild(reviewEl);
+    carouselThreeEl.appendChild(movieReviewEl);
 }
 
 var carouselItemFour = function (movieData, movie) {
