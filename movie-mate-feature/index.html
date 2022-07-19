@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="./assets/style/css/style.css" />
+		<title>Movie Mate</title>
+	</head>
+	<body>
+		<header>
+			<h1>
+				<a href="index.html">Movie Mate</a>
+			</h1>
+		</header>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+			integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+			crossorigin="anonymous"
+		></script>
+
+		</header>
+		<!--hero section-->
+		<section>
+			<div class="row hero-section">
+				<div class="col l6 s12 text-and-input">
+					<div class="text-content">
+						<h2>Lorem Ipsum.</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad a numquam dicta obcaecati doloremque, unde tenetur inventore ut quasi!</p>
+					</div>
+					<div class="input-field">
+						<input id="search" type="text" class="validate" placeholder="Search for Movies"/>
+						<button id="submit-btn" type="submit" for="search">Search</button>
+					</div>
+				</div>
+            </div>
+			<div class="row main-content">
+				<div class="col l12 s12 currently-popular">
+					<h3>Currently Popular</h3>
+				</div>
+				<div class="carousel col l12 s12" id="carousel-items">
+					<a class="carousel-item item1" href="#one!"><!--<img src="./assets/images/Picture2.jpg">--></a>
+					<a class="carousel-item item2" href="#two!"><!--<img src="./assets/images/Picture3.jpg">--></a>
+					<a class="carousel-item item3" href="#three!"><!--<img src="./assets/images/Picture4.jpg">--></a>
+					<a class="carousel-item item4" href="#four!"><!--<img src="./assets/images/Picture5.jpg">--></a>
+				</div>
+			</div>
+		</section>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="./assets/js/script.js"></script>
+
+        <!-- begin d2-dro changes -->
+
+        <!-- how many columns per row? -->
+        <section id="pastSearches" class="history col s3">
+            Your previous searches:
+			<ul id="search-history" class="movie-list"></ul>
+        </section>
+
+        <footer>
+            <div class="top-navigation"><a href="index.html"><i class="small material-icons">arrow_upward</i></a><div>
+
+        </footer>
+
+        <!-- end d2-dro changes -->
+        
+	</body>
+</html>
+
