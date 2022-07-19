@@ -63,13 +63,13 @@ header a {
 }
 
 .carousel {
-    background-color: rgba(165, 42, 42, 0.4);
+    background-color: var(--primary-background-color);
     
 }
 
 .currently-popular {
     text-align: center;
-    background-color: rgba(165, 42, 42, 0.4);
+    background-color: var(--primary-background-color);
     color: black;
     margin-bottom: 0;
 }
