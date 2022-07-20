@@ -1,6 +1,7 @@
 :root {
  --primary-background-color: rgb(232, 229, 229);
- --header-text-color: white;
+ --header-text-color: black;
+ --footer-text-color: white;
 }
 
 * {
@@ -13,18 +14,19 @@
   }
 
 header {
-    padding: 20px 35px;
+    /* padding: 20px 35px; */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     position: sticky;
     top: 0;
-    background-image: url("../../images/background-image.jpg");
+    background-image: url("../../images/background-image.webp");
     background-size: cover;
     z-index: 9999;
 }
 
 header h1 {
+    text-align: center;
     margin: 0;
     font-size: 40px;
 }
@@ -35,15 +37,25 @@ header a {
 }
 
 .hero-section {
-    background-image: url("../../images/background-image.jpg");
+    background-image: url("../../images/background-image.webp");
     background-position: center;
+    background-size: cover;
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
     background-blend-mode: overlay;
     margin-bottom: 0;
-    height: 400px;
-    /* background-size: cover; */
+    /* height: 400px;   */
+    /* background-size:cover; */
+    display:flex;
+    justify-content: right;
 }
+
+.text-content, .input-field {
+    text-align: right;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+  }
 
 .input-field input[type=text].valid {
     border-bottom: 1px solid #000;
@@ -60,6 +72,7 @@ header a {
 
 .text-and-input {
     margin-top: 50px;
+    
 }
 
 .carousel {
@@ -105,7 +118,7 @@ footer {
 } */
 
 footer a {
-   color: var(--header-text-color);
+   color: var(--footer-text-color);
    text-decoration: none;
 }
 
