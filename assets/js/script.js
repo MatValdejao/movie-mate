@@ -46,6 +46,9 @@ var getMovie = function (event) {
 
 	// calls retrieveData function
 	retrieveData(movie);
+
+	// clear input field
+	inputEl.value = ""
 };
 
 var displayMovie = function (data2, movie, data) {

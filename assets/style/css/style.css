@@ -33,7 +33,7 @@ header {
 header h1 {
     text-align: center;
     margin: 0;
-    font-size: 40px;
+    font-size: 43px;
 }
 
 header a {
@@ -86,31 +86,42 @@ header a {
 
 .input-field {
     margin-top: 30px;
-  
 }
 
 .text-and-input {
     margin-top: 50px;
-    
+}
+
+#search {
+    background-color: ghostwhite;
 }
 
 #submit-btn {
     border: outset;
-
+    background-color:teal;
+    color: white;
+    border-color: teal;
 }
 
-#submit-btn:focus {
-    border:inset;
+#submit-btn:hover {
+    border:outset;
     background-color: var(--submit-button-after-color);
+    color: black;
+    border-color: var(--submit-button-after-color);
 }
 
 #historyBtn {
     border: outset; 
+    background-color:teal;
+    color: white;
+    border-color: teal;
 }
 
-#historyBtn :focus {
-    border:inset;
+#historyBtn:hover {
+    border:outset;
     background-color: var(--submit-button-after-color);
+    color: black;
+    border-color: var(--submit-button-after-color)
 }
 
 .carousel {
@@ -139,8 +150,6 @@ header a {
     /* border: solid 2px black; */
     opacity: 0.5;
     background-repeat: no-repeat;
-    
-    
 }
 
 .history {
