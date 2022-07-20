@@ -124,8 +124,9 @@ var carouselItemThree = function (reviewData, movie) {
 	 var movieReviewEl = document.createElement("p");
 	 movieReviewEl.style.color = "black";
 	 movieReviewEl.style.textAlign = "center";
-	 movieReviewEl.innerHTML = "<a href=" + reviewData.results[0].link.url + " target = _blank> review to" + movie + "</a>";
-
+	 movieReviewEl.innerHTML = "<a href=" + reviewData.results[0].link.url + " target = _blank> Review To " + movie + "</a>";
+     movieReviewEl.style.textDecoration = "none"
+     movieReview.style.color = "black"
      
 
     // append to page
