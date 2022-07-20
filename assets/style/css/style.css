@@ -103,7 +103,7 @@ header a {
 }
 
 footer {
-  background: black;
+  background-color:gold;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -118,7 +118,7 @@ footer {
 } */
 
 footer a {
-   color: var(--footer-text-color);
+   color: black;
    text-decoration: none;
 }
 
