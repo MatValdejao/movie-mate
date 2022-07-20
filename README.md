@@ -1,4 +1,4 @@
-# movie-mate
+# Movie Mate
 
 ## User Story
 
