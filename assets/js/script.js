@@ -52,6 +52,8 @@ var getMovie = function (event) {
 };
 
 var displayMovie = function (data2, movie, data) {
+	mainContentEl.style.display = "block"
+
     var reviewData = data
     console.log(reviewData)
 	// get movie data
@@ -196,6 +198,7 @@ var carouselItemFour = function (movieData, movie) {
 document.addEventListener("DOMContentLoaded", function () {
 	var elems = document.querySelectorAll(".carousel");
 	var instances = M.Carousel.init(elems);
+	mainContentEl.style.display = "none"
 });
 
 submitButtonEl.addEventListener("click", getMovie);
