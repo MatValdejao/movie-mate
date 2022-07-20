@@ -63,6 +63,10 @@ header a {
     line-height: 1.2;
   }
 
+  .text-content h3 {
+    font-size: 40px;
+  }
+
 .input-field input[type=text].valid {
     border-bottom: 1px solid #000;
     box-shadow: 0 5px 0 0 #000;
@@ -157,8 +161,13 @@ header a {
     justify-content: left;
 }
 
-.history p {
-    
+.history {
+    display: flex;
+    justify-content: center;
+}
+
+.history h3 {
+    font-size: 30px;
 }
 
 footer {
