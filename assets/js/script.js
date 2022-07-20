@@ -219,26 +219,3 @@ var pastSearchBtns = function (movie) {
 	histButtonEl.textContent = movie;
 	movieListEl.appendChild(histButtonEl);
 }
-
-// var saveHistory = function (movie) {
-// 	if (searchHistory.indexOf(movie) === -1) {
-// 		searchHistory.push(city);
-// 	}
-// 	localStorage.setItem("movie", searchHistory);
-// };
-
-// var loadHistory = function () {
-// 	searchHistory = localStorage.getItem("movie");
-// 	if (searchHistory === null) {
-// 		searchHistory = [];
-// 		return;
-// 	}
-// 	searchHistory = searchHistory.split(",");
-
-// 	for (var i = 0; i < searchHistory.length; i++) {
-// 		pastSearchBtns(searchHistory[i]);
-// 	}
-// };
-
-console.log(saveHistory)
-console.log(loadHistory)
