@@ -205,3 +205,4 @@ input.addEventListener("keypress", function(event) {
 		getMovie();
 	}
 })
+// create function to save to local.
