@@ -1,6 +1,10 @@
 :root {
  --primary-background-color: rgb(232, 229, 229);
- --header-text-color: white;
+ --header-text-color: black;
+ --hero-font-color: rgb(44, 44, 44);
+ --searchbox-font-color: rgb(123, 123, 123);
+ --submit-button-after-color: rgb(163, 163, 163);
+ --footer-text-color: white;
 }
 
 * {
@@ -13,18 +17,21 @@
   }
 
 header {
-    padding: 20px 35px;
+    /* padding: 20px 35px; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     position: sticky;
+    background-attachment: fixed;
     top: 0;
-    background-image: url("../../images/background-image.jpg");
+    background-image: url("../../images/background-image.webp");
     background-size: cover;
+    background-position: 80%;
     z-index: 9999;
 }
 
 header h1 {
+    text-align: center;
     margin: 0;
     font-size: 40px;
 }
@@ -34,37 +41,88 @@ header a {
     text-decoration: none;
 }
 
+
 .hero-section {
-    background-image: url("../../images/background-image.jpg");
+    background-image: url("../../images/background-image.webp");
     background-position: center;
+    background-size: cover;
+    background-position: 80%;
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
     background-blend-mode: overlay;
     margin-bottom: 0;
-    height: 400px;
-    /* background-size: cover; */
+    background-attachment: fixed;
+    display:flex;
+    justify-content: right;
 }
+
+.text-content, .input-field {
+    text-align: right;
+    color: var(--hero-font-color);
+    font-size: 18px;
+    line-height: 1.2;
+  }
 
 .input-field input[type=text].valid {
     border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
+    box-shadow: 0 5px 0 0 #000;
+    
 }
 
 .input-field input {
-    color:white;
+    color:var(--header-text-color);
+  }
+
+  .input-field ::placeholder {
+    color: var(--searchbox-font-color);
+  }
+
+  #search {
+    display:block;
+    border: .25px solid rgb(169, 169, 52);
+    border-radius: 10px;
+    box-shadow: 0 .5px 0 0 #000;
   }
 
 .input-field {
     margin-top: 30px;
+  
 }
 
 .text-and-input {
     margin-top: 50px;
+    
+}
+
+#submit-btn {
+    border: outset;
+
+}
+
+#submit-btn:focus {
+    border:inset;
+    background-color: var(--submit-button-after-color);
+}
+
+#historyBtn {
+    border: outset; 
+}
+
+#historyBtn :focus {
+    border:inset;
+    background-color: var(--submit-button-after-color);
 }
 
 .carousel {
     background-color: var(--primary-background-color);
+    padding-bottom:50px;
+    height:600px;
     
+}
+
+.carousel .carousel-item {
+    height: 450px;
+    width:400px;
 }
 
 .currently-popular {
@@ -75,13 +133,17 @@ header a {
 }
 
 .carousel-item{
-    background-image: url("../../images/carousel.png");
-    background-size: cover;
+    background-image: url("../../images/film.jpg");
+    background-size:cover;
+    background-position:center;
+    /* border: solid 2px black; */
     opacity: 0.5;
+    background-repeat: no-repeat;
+    
+    
 }
 
 .history {
-    /* color: var(--); */
     display: flex;
     justify-content: left;
 }
@@ -99,11 +161,6 @@ footer {
   justify-content: center;
 
 }
-
-/* footer h2 {
-    font-size: 20px; 
-
-} */
 
 footer a {
    color: black;

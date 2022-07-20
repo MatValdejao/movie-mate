@@ -55,6 +55,8 @@ var displayMovie = function (data2, movie, data) {
     var movieData = data2;
     
     // calls carousel builder functions
+	// scale the headers of the cards down
+	// enlarge the content font slightly to fill the card
     carouselItemOne(movieData, movie);
     carouselItemTwo(movieData, movie);
     carouselItemThree(reviewData, movie);
@@ -66,6 +68,8 @@ var carouselItemOne = function (movieData, movie) {
 	var carouselOneEl = document.querySelector(".item1");
 
 	// display movie title as first carousel item
+	// move display to the header of the section
+	// add age rating in its place maybe?
 	var movieTitleEl = document.createElement("h3");
 	movieTitleEl.style.color = "black";
 	movieTitleEl.style.textAlign = "center";
@@ -89,6 +93,7 @@ var carouselItemTwo = function (movieData, movie) {
 	var carouselTwoEl = document.querySelector(".item2");
 
 	// plot element carousel item
+	// remove "Plot" title header
 	var plotTitleEl = document.createElement("h3");
 	plotTitleEl.style.color = "black";
 	plotTitleEl.style.textAlign = "center";
@@ -127,7 +132,7 @@ var carouselItemThree = function (reviewData, movie) {
 	 movieReviewEl.style.textAlign = "center";
 	 movieReviewEl.innerHTML = "<a href=" + reviewData.results[0].link.url + " target = _blank> Review To " + movie + "</a>";
      movieReviewEl.style.textDecoration = "none"
-     movieReview.style.color = "black"
+     movieReviewEl.style.color = "black"
      
 
     // append to page
