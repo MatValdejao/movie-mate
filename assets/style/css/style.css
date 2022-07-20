@@ -87,14 +87,15 @@ header a {
     margin-bottom: 0;
 }
 
-.carousel .carousel-item>img {
-    height: 300px;
-    width: 300px;
+.carousel-item{
+    background-image: url("../../images/carousel.png");
+    background-size: cover;
+    opacity: 0.5;
 }
 
 .history {
     /* color: var(--); */
-    display: flexbox;
+    display: flex;
     justify-content: left;
 }
 
