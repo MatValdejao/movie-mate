@@ -208,3 +208,37 @@ input.addEventListener("keypress", function(event) {
 		getMovie();
 	}
 })
+
+var searchHistory = [];
+var movieListEl = document.querySelector(".movie-list");
+
+var pastSearchBtns = function (movie) {
+	var histButtonEl = document.createElement("button")
+	histButtonEl.setAttribute("type", "submit")
+	histButtonEl.classList = "history-btn"
+	histButtonEl.textContent = movie;
+	movieListEl.appendChild(histButtonEl);
+}
+
+// var saveHistory = function (movie) {
+// 	if (searchHistory.indexOf(movie) === -1) {
+// 		searchHistory.push(city);
+// 	}
+// 	localStorage.setItem("movie", searchHistory);
+// };
+
+// var loadHistory = function () {
+// 	searchHistory = localStorage.getItem("movie");
+// 	if (searchHistory === null) {
+// 		searchHistory = [];
+// 		return;
+// 	}
+// 	searchHistory = searchHistory.split(",");
+
+// 	for (var i = 0; i < searchHistory.length; i++) {
+// 		pastSearchBtns(searchHistory[i]);
+// 	}
+// };
+
+console.log(saveHistory)
+console.log(loadHistory)
