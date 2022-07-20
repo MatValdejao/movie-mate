@@ -1,6 +1,9 @@
 :root {
  --primary-background-color: rgb(232, 229, 229);
  --header-text-color: black;
+ --hero-font-color: rgb(44, 44, 44);
+ --searchbox-font-color: rgb(123, 123, 123);
+ --submit-button-after-color: rgb(163, 163, 163);
  --footer-text-color: white;
 }
 
@@ -49,35 +52,65 @@ header a {
     background-blend-mode: overlay;
     margin-bottom: 0;
     background-attachment: fixed;
-    /* height: 400px;   */
-    /* background-size:cover; */
     display:flex;
     justify-content: right;
 }
 
 .text-content, .input-field {
     text-align: right;
-    color: #fff;
+    color: var(--hero-font-color);
     font-size: 18px;
     line-height: 1.2;
   }
 
 .input-field input[type=text].valid {
     border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
+    box-shadow: 0 5px 0 0 #000;
+    
 }
 
 .input-field input {
-    color:white;
+    color:var(--header-text-color);
+  }
+
+  .input-field ::placeholder {
+    color: var(--searchbox-font-color);
+  }
+
+  #search {
+    display:block;
+    border: .25px solid rgb(169, 169, 52);
+    border-radius: 10px;
+    box-shadow: 0 .5px 0 0 #000;
   }
 
 .input-field {
     margin-top: 30px;
+  
 }
 
 .text-and-input {
     margin-top: 50px;
     
+}
+
+#submit-btn {
+    border: outset;
+
+}
+
+#submit-btn:focus {
+    border:inset;
+    background-color: var(--submit-button-after-color);
+}
+
+#historyBtn {
+    border: outset; 
+}
+
+#historyBtn :focus {
+    border:inset;
+    background-color: var(--submit-button-after-color);
 }
 
 .carousel {
@@ -88,8 +121,8 @@ header a {
 }
 
 .carousel .carousel-item {
-    height: 500px;
-    width:350px;
+    height: 450px;
+    width:400px;
 }
 
 .currently-popular {
@@ -111,7 +144,6 @@ header a {
 }
 
 .history {
-    /* color: var(--); */
     display: flex;
     justify-content: left;
 }
@@ -129,11 +161,6 @@ footer {
   justify-content: center;
 
 }
-
-/* footer h2 {
-    font-size: 20px; 
-
-} */
 
 footer a {
    color: black;
