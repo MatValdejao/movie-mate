@@ -9,6 +9,7 @@
 
 * {
 	box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,7 +21,6 @@ header {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	position: sticky;
 	background-attachment: fixed;
 	top: 0;
 	background-image: url("../../images/background-image.webp");
@@ -232,7 +232,8 @@ footer a {
 	text-decoration: none;
 }
 
-footer a:hover {
+footer i:hover {
+    cursor: pointer;
 	color: var(--submit-button-after-color);
 }
 
