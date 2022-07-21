@@ -7,7 +7,7 @@ var movieTitle = document.querySelector(".movie-title");
 var searchHistory = [];
 
 var retrieveData = function (movie) {
-	var apiURL = "http://www.omdbapi.com/?apikey=" + apiKey + "&t=" + movie;
+	var apiURL = "https://www.omdbapi.com/?apikey=" + apiKey + "&t=" + movie;
 
 	fetch(apiURL)
 		.then(function (res) {
