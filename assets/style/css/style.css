@@ -177,6 +177,17 @@ header a {
     background-repeat: no-repeat;
 }
 
+.carousel-item h3 {
+    padding-top: 10%;
+}
+
+.carousel-item p, ul {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
 #pastSearches {
     margin-left: 2vh;
     font-size: 1.8rem;
@@ -203,14 +214,14 @@ header a {
     transition: all .2s ease;
 }
 
-.history {
+/* .history {
     display: flex;
     justify-content: left;
 }
 
 .history p {
     
-}
+} */
 
 #clear-button-section {
     margin-bottom: 5vh;

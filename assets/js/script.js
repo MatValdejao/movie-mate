@@ -300,5 +300,3 @@ var clearSearches = function () {
 $(".clear-btn").on("click", function (event) {
 	clearSearches();
 });
-
-// console.log(clearSearches)
