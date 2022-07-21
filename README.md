@@ -33,6 +33,12 @@ The deployed application can be found at: https://matvaldejao.github.io/movie-ma
 
 ![screenshot of deployed application](./assets/images/final-screenshot.png)
 
+## Desktop Demo
+
+
+## Mobile Demo
+
+
 ## Contributors
 
 * Mateus Valdejao - [GitHub Profile](https://github.com/MatValdejao)
