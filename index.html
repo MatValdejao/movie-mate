@@ -1,13 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-</head>
-<body>
-    <h1>Test</h1>
-    <p>test para</p>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="./assets/style/css/style.css" />
+		<title>Movie Mate</title>
+	</head>
+	<body>
+		<header>
+			<h1>
+				<a id="page-top" href="index.html">Movie Mate</a>
+			</h1>
+		</header>
+		
+		<!--hero section-->
+		<section>
+			<!-- change script to display movie title from search here -->
+			<!-- hide this section when page is first loaded. display search after initial search has been made -->
+			<div class="row hero-section">
+				<div class="col l6 s12 text-and-input">
+					<div class="text-content">
+						<h3>Looking for quick facts to hold up a conversation about a movie?</h3>
+						<p>You've landed at the right place! Movie Mate gets you information about a movie's plot, cast, and more!</p>
+					</div>
+					<div class="input-field">
+						<input id="search" type="text" class="validate" placeholder="Search for Movies"/>
+						<button id="submit-btn" type="submit" for="search">Search</button>
+						<a href="#pastSearches"><button id="historyBtn">History</button></a>
+					</div>
+				</div>
+            </div>
+			<div class="row main-content">
+				<div class="col l12 s12 currently-popular">
+					<h3 class="movie-title"></h3>
+				</div>
+				<div class="carousel col l12 s12" id="carousel-items">
+					<a class="carousel-item item1" href="#one!">
+					</a>
+					<a class="carousel-item item2" href="#two!">
+					</a>
+					<a class="carousel-item item3" href="#three!">
+					</a>
+					<a class="carousel-item item4" href="#four!">
+					</a>
+				</div>
+			</div>
+		</section>
+		
+
+        <!-- history and footer -->
+
+        <!-- how many columns per row? -->
+		<!-- until there are searches do not display anything here -->
+        <section id="pastSearches" class="movie-list col s3">
+            <strong>Your previous searches:</strong>
+        </section>
+		<section id ="clear-button-section">
+			<div id="clear-button" class="clear-btn">
+				<button class="clr-btn">Clear History
+				</button>
+			</div>
+		</section>
+		
+
+        <footer>
+            <div class="top-navigation"><i class="small material-icons">arrow_upward</i></a><div>
+        </footer>
+
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script
+        src="https://code.jquery.com/jquery-3.6.0.slim.min.js">
+		</script>
+		<script src="./assets/js/script.js"></script>
+
+        <!-- end d2-dro changes -->
+        
+	</body>
 </html>
+
