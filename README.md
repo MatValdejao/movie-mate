@@ -31,7 +31,7 @@ Movie Mate was built using:
 
 The deployed application can be found at: https://matvaldejao.github.io/movie-mate/
 
-![screenshot of deployed application](./assets/images/final-screenshot.png)
+![screenshot of deployed application]()
 
 ## Contributors
 
