@@ -33,7 +33,7 @@ header {
 header h1 {
     text-align: center;
     margin: 0;
-    font-size: 40px;
+    font-size: 43px;
 }
 
 header a {
@@ -75,6 +75,7 @@ header a {
 
   .input-field ::placeholder {
     color: var(--searchbox-font-color);
+    padding-left: 10px;
   }
 
   #search {
@@ -86,38 +87,73 @@ header a {
 
 .input-field {
     margin-top: 30px;
-  
 }
 
 .text-and-input {
     margin-top: 50px;
-    
+}
+
+#search {
+    background-color: ghostwhite;
 }
 
 #submit-btn {
     border: outset;
-
+    background-color:teal;
+    color: white;
+    border-color: teal;
+    transition: all .2s ease;
 }
 
-#submit-btn:focus {
-    border:inset;
+#submit-btn:hover {
+    border:outset;
     background-color: var(--submit-button-after-color);
+    color: black;
+    border-color: var(--submit-button-after-color);
+    transition: all .2s ease;
 }
 
 #historyBtn {
     border: outset; 
+    background-color:teal;
+    color: white;
+    border-color: teal;
+    transition: all .2s ease;
 }
 
-#historyBtn :focus {
-    border:inset;
+#historyBtn:hover {
+    border:outset;
     background-color: var(--submit-button-after-color);
+    color: black;
+    border-color: var(--submit-button-after-color);
+    transition: all .2s ease;
+    
 }
+
+.clr-btn {
+    border: outset;
+    background-color:teal;
+    color: white;
+    border-color: teal;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    font-size: 1.2rem;
+    transition: all .2s ease;
+}
+
+.clr-btn:hover {
+    border:outset;
+    background-color: var(--submit-button-after-color);
+    color: black;
+    border-color: var(--submit-button-after-color);
+    transition: all .2s ease;
+}
+
 
 .carousel {
     background-color: var(--primary-background-color);
     padding-bottom:50px;
     height:600px;
-    
 }
 
 .carousel .carousel-item {
@@ -139,17 +175,60 @@ header a {
     /* border: solid 2px black; */
     opacity: 0.5;
     background-repeat: no-repeat;
-    
-    
 }
 
-.history {
+.carousel-item h3 {
+    padding-top: 10%;
+}
+
+.carousel-item p, ul {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+#pastSearches {
+    margin-left: 2vh;
+    font-size: 1.8rem;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    visibility: hidden;
+}
+
+.history-btn {
+    border: outset;
+    background-color:teal;
+    color: white;
+    border-color: teal;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    font-size: 1.5rem;
+    transition: all .2s ease;
+}
+
+.history-btn:hover {
+    border:outset;
+    background-color: var(--submit-button-after-color);
+    color: black;
+    border-color: var(--submit-button-after-color);
+    transition: all .2s ease;
+}
+
+/* .history {
     display: flex;
     justify-content: left;
 }
 
 .history p {
     
+} */
+
+#clear-button-section {
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
 }
 
 footer {
@@ -163,12 +242,12 @@ footer {
 }
 
 footer a {
-   color: black;
+   color: teal;
    text-decoration: none;
 }
 
 footer a:hover {
-   color: red;
+   color: var(--submit-button-after-color);
 }
 
 .top-navigation {
@@ -176,4 +255,51 @@ footer a:hover {
    display: flex;
    flex-wrap: wrap;
    
+}
+
+@media screen and (max-width: 980px) {
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+    }
+  
+    header h1 {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .text-content {
+        text-align: center;
+    }
+
+    .top-navigation {
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .hero-section {
+      width: 100%;
+    }
+    
+    #search {
+        
+        padding-left: 0px;
+      }
+
+    
+  
+  
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+    .hero-section button {
+      width: 100%;
+    }
+
+  
+    .text-content {
+      width: 100%;
+      text-align: center;
+    }
+}
 }
