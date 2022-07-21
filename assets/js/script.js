@@ -292,8 +292,7 @@ var clearSearchBtn = function () {
 clearButtonEl.addEventListener("click", clearSearches);
 
 var clearSearches = function () {
-	localStorage.removeItem("movie", searchHistory);
-	// if(localStorage.length > 0);
+	localStorage.removeItem("movie");
 
 };
 
