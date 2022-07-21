@@ -312,3 +312,7 @@ $(".clr-btn").on("click", function (event) {
 	searchHistory = [];
 	savedStorage();
 });
+
+$(".top-navigation").on("click", function (event) {
+	document.getElementById("page-top").scrollIntoView();
+});
