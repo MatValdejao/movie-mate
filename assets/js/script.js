@@ -245,7 +245,7 @@ var saveMovie = function (movie) {
 		movie = movie.toUpperCase();
 		searchHistory.push(movie);
 
-		// save city to page
+		// save movie to page
 		historyButtons(movie);
 	}
 	localStorage.setItem("movie", searchHistory);
@@ -276,3 +276,29 @@ $(".movie-list").on("click", ".history-btn", function (event) {
 
 	retrieveData(movie);
 });
+
+// add button to remove stored movie searches
+
+var clearButtonEl = document.getElementById("clear-button");
+
+
+var clearSearchBtn = function () {
+	var clearButtonEl = document.createElement("button");
+	clearButtonEl.setAttribute("submit");
+	clearButtonEl.classList = "clear-btn";
+	
+};
+
+clearButtonEl.addEventListener("click", clearSearches);
+
+var clearSearches = function () {
+	localStorage.removeItem("movie", searchHistory);
+	// if(localStorage.length > 0);
+
+};
+
+$(".clear-btn").on("click", function (event) {
+	clearSearches();
+});
+
+// console.log(clearSearches)
