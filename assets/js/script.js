@@ -310,4 +310,6 @@ $(".movie-list").on("click", ".history-btn", function (event) {
 $(".clr-btn").on("click", function (event) {
 	localStorage.clear();
 	$(".history-btn").remove();
+	searchHistory = [];
+	savedStorage();
 })

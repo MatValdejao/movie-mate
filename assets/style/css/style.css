@@ -109,6 +109,7 @@ header a {
 }
 
 #submit-btn:hover {
+    cursor: pointer;
 	border: outset;
 	background-color: var(--submit-button-after-color);
 	color: black;
@@ -125,6 +126,7 @@ header a {
 }
 
 #historyBtn:hover {
+    cursor: pointer;
 	border: outset;
 	background-color: var(--submit-button-after-color);
 	color: black;
@@ -144,6 +146,7 @@ header a {
 }
 
 .clr-btn:hover {
+    cursor: pointer;
 	border: outset;
 	background-color: var(--submit-button-after-color);
 	color: black;
@@ -208,6 +211,7 @@ ul {
 }
 
 .history-btn:hover {
+    cursor: pointer;
 	border: outset;
 	background-color: var(--submit-button-after-color);
 	color: black;
