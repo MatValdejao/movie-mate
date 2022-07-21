@@ -313,6 +313,6 @@ $(".clr-btn").on("click", function (event) {
 	savedStorage();
 });
 
-$(".top-navigation").on("click", function (event) {
+$(".material-icons").on("click", function (event) {
 	document.getElementById("page-top").scrollIntoView();
 });
