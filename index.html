@@ -20,8 +20,6 @@
 		</header>
 		<script
 			src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-			integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
-			crossorigin="anonymous"
 		></script>
 
 		</header>
@@ -38,7 +36,7 @@
 					<div class="input-field">
 						<input id="search" type="text" class="validate" placeholder="Search for Movies"/>
 						<button id="submit-btn" type="submit" for="search">Search</button>
-							<button id="historyBtn">History</button>
+						<a href="#pastSearches"><button id="historyBtn">History</button></a>
 					</div>
 				</div>
             </div>
@@ -54,22 +52,28 @@
 				</div>
 			</div>
 		</section>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<script src="./assets/js/script.js"></script>
+		
 
         <!-- begin d2-dro changes -->
 
         <!-- how many columns per row? -->
 		<!-- until there are searches do not display anything here -->
-        <section id="pastSearches" class="history col s3">
-            <h3>Your Previous Searches</h3>
-			<ul id="search-history" class="movie-list"></ul>
+        <section id="pastSearches" class="movie-list col s3">
+            <strong>Your previous searches:</strong>
+			<!-- <ul id="search-history" class="movie-list"></ul> -->
         </section>
+		
 
         <footer>
             <div class="top-navigation"><a href="index.html"><i class="small material-icons">arrow_upward</i></a><div>
 
         </footer>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script
+        src="https://code.jquery.com/jquery-3.6.0.slim.min.js">
+		</script>
+		<script src="./assets/js/script.js"></script>
 
         <!-- end d2-dro changes -->
         
