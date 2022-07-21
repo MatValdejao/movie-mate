@@ -3,6 +3,7 @@ const apiKey2 = "6EW8DVJ9Y5sGBFMGXfuttZxSHuABvD5A";
 var mainContentEl = document.querySelector(".main-content");
 var submitButtonEl = document.getElementById("submit-btn");
 var movieListEl = document.querySelector(".movie-list");
+var movieTitle = document.querySelector(".movie-title")
 var searchHistory = [];
 
 var retrieveData = function (movie) {
@@ -65,6 +66,7 @@ var getMovie = function (event) {
 
 var displayMovie = function (data2, movie, data) {
 	saveMovie(movie);
+	$(".carousel-val").remove();
 
 	mainContentEl.style.display = "block";
 
@@ -93,20 +95,30 @@ var carouselItemOne = function (movieData, movie) {
 	movieTitleEl.classList = "carousel-val";
 	movieTitleEl.style.color = "black";
 	movieTitleEl.style.textAlign = "center";
-	movieTitleEl.textContent = movie;
+	movieTitleEl.textContent = movieData.Title;
 
 	// date movie released, together with movie title carousel
 	var releaseDateEl = document.createElement("h3");
 	releaseDateEl.classList = "carousel-val";
 	releaseDateEl.style.color = "black";
+	releaseDateEl.style.marginBottom = "10vh";
 	releaseDateEl.style.textAlign = "center";
 	var releaseDateSplit = movieData.Released.split(" ");
 	var releaseYear = releaseDateSplit[2];
-	releaseDateEl.textContent = "(" + releaseYear + ")";
+	releaseDateEl.textContent = "Release Date: " + releaseYear;
+
+	// get the rated data for the movie
+	var ratedEl = document.createElement("h4");
+	ratedEl.classList = "carousel-val";
+	ratedEl.style.color = "black";
+	ratedEl.style.textAlign = "center";
+	var rated = movieData.Rated;
+	ratedEl.textContent = "Rated: " + rated;
 
 	// append to page
-	carouselOneEl.appendChild(movieTitleEl);
+	movieTitle.appendChild(movieTitleEl);
 	carouselOneEl.appendChild(releaseDateEl);
+	carouselOneEl.appendChild(ratedEl)
 };
 
 var carouselItemTwo = function (movieData, movie) {
@@ -117,12 +129,16 @@ var carouselItemTwo = function (movieData, movie) {
 	// remove "Plot" title header
 	var plotTitleEl = document.createElement("h3");
 	plotTitleEl.style.color = "black";
+	plotTitleEl.style.marginBottom = "5vh"
+	plotTitleEl.classList = "carousel-val"
 	plotTitleEl.style.textAlign = "center";
 	plotTitleEl.textContent = "Plot";
 
 	// plot description
 	var plotEl = document.createElement("p");
 	plotEl.style.color = "black";
+	plotEl.style.fontSize = "1.6rem"
+	plotEl.classList = "carousel-val"
 	plotEl.style.textAlign = "center";
 	// checks whether plot description exists
 	if (movieData.Plot === "N/A") {
@@ -143,11 +159,15 @@ var carouselItemThree = function (reviewData, movie) {
 	// reviews section carousel item
 	var reviewEl = document.createElement("h3");
 	reviewEl.style.color = "black";
+	reviewEl.style.marginBottom = "5vh"
+	reviewEl.classList = "carousel-val"
 	reviewEl.style.textAlign = "center";
 	reviewEl.textContent = "Reviews";
 
 	var movieReviewEl = document.createElement("p");
 	movieReviewEl.style.color = "black";
+	movieReviewEl.style.fontSize = "2rem"
+	movieReviewEl.classList = "carousel-val"
 	movieReviewEl.style.textAlign = "center";
 	if (reviewData.results === null) {
 		movieReviewEl.textContent = "No review available for " + movie;
@@ -155,12 +175,11 @@ var carouselItemThree = function (reviewData, movie) {
 		movieReviewEl.innerHTML =
 			"<a href=" +
 			reviewData.results[0].link.url +
-			" target = _blank> Review To " +
+			"target=_blank> New York Times Review To " +
 			movie +
 			"</a>";
 	}
 	movieReviewEl.style.textDecoration = "none";
-	movieReviewEl.style.color = "black";
 
 	// append to page
 	carouselThreeEl.appendChild(reviewEl);
@@ -174,18 +193,21 @@ var carouselItemFour = function (movieData, movie) {
 	// cast and awards carousel item
 	var castEl = document.createElement("h3");
 	castEl.style.color = "black";
+	castEl.classList = "carousel-val"
 	castEl.style.textAlign = "center";
 	castEl.textContent = "Notable Cast";
 
 	// create list to append each cast person into
 	var actorListEl = document.createElement("ul");
 	var actorsList = movieData.Actors.split(",");
+	actorListEl.classList = "carousel-val"
 
 	// append actors into cast list
 	for (var i = 0; i < actorsList.length; i++) {
 		var listItemEl = document.createElement("li");
 		listItemEl.textContent = actorsList[i];
 		listItemEl.style.color = "black";
+		listItemEl.style.fontSize = "1.4rem"
 		actorListEl.appendChild(listItemEl);
 	}
 
@@ -197,18 +219,22 @@ var carouselItemFour = function (movieData, movie) {
 	if (movieData.Awards !== "N/A") {
 		var awardsEl = document.createElement("h3");
 		awardsEl.style.color = "black";
+		awardsEl.classList = "carousel-val"
 		awardsEl.style.textAlign = "center";
 		awardsEl.textContent = "Awards";
 
 		// create list to append each cast person into
 		var awardListEl = document.createElement("ul");
+		awardListEl.classList = "carousel-val"
 		var awardList = movieData.Awards.split(",");
-
+	
 		// append awards to list
 		for (var i = 0; i < awardList.length; i++) {
 			var listItemEl = document.createElement("li");
 			listItemEl.textContent = awardList[i];
 			listItemEl.style.color = "black";
+			listItemEl.style.paddingTop = "0"
+			listItemEl.style.fontSize = "1.4rem"
 			awardListEl.appendChild(listItemEl);
 		}
 		// append to page when exists
@@ -223,15 +249,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	mainContentEl.style.display = "none";
 });
 
-// add "Enter" key as possible input
-var input = document.getElementById("search");
-input.addEventListener("keypress", function (event) {
-	if (event.key === "Enter") {
-		event.preventDefault();
-		getMovie();
-	}
-});
-
 var historyButtons = function (movie) {
 	// create history button for specific movie
 	var histButtonEl = document.createElement("button");
@@ -240,7 +257,7 @@ var historyButtons = function (movie) {
 	movie = movie.toUpperCase();
 	histButtonEl.textContent = movie;
 
-	movieListEl.append(histButtonEl);
+	movieListEl.appendChild(histButtonEl);
 };
 
 var saveMovie = function (movie) {
@@ -269,6 +286,15 @@ var savedStorage = function () {
 	}
 };
 
+// add "Enter" key as possible input
+var input = document.getElementById("search");
+input.addEventListener("keypress", function (event) {
+	if (event.key === "Enter") {
+		event.preventDefault();
+		getMovie();
+	}
+});
+
 savedStorage();
 
 submitButtonEl.addEventListener("click", getMovie);
@@ -280,25 +306,8 @@ $(".movie-list").on("click", ".history-btn", function (event) {
 	retrieveData(movie);
 });
 
-// add button to remove stored movie searches
 
-var clearButtonEl = document.getElementById("clear-button");
-
-
-var clearSearchBtn = function () {
-	var clearButtonEl = document.createElement("button");
-	clearButtonEl.setAttribute("submit");
-	clearButtonEl.classList = "clear-btn";
-	
-};
-
-clearButtonEl.addEventListener("click", clearSearches);
-
-var clearSearches = function () {
-	localStorage.removeItem("movie");
-
-};
-
-$(".clear-btn").on("click", function (event) {
-	clearSearches();
-});
+$(".clr-btn").on("click", function (event) {
+	localStorage.clear();
+	$(".history-btn").remove();
+})
