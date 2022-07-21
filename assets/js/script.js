@@ -23,7 +23,7 @@ var retrieveData = function (movie) {
 		})
 		.catch(function (error) {
 			console.log("Unable to connect to Movies API");
-		});
+		s});
 };
 
 var movieReview = function (data2, movie) {
