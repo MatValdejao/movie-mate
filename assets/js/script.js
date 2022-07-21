@@ -172,10 +172,11 @@ var carouselItemThree = function (reviewData, movie) {
 	if (reviewData.results === null) {
 		movieReviewEl.textContent = "No review available for " + movie;
 	} else {
+		console.log(reviewData)
 		movieReviewEl.innerHTML =
 			"<a href=" +
 			reviewData.results[0].link.url +
-			"target=_blank> New York Times Review To " +
+			" target=_blank> New York Times Review To " +
 			movie +
 			"</a>";
 	}
