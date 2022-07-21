@@ -142,6 +142,7 @@ header a {
 	margin-left: 1vh;
 	font-size: 1.2rem;
 	transition: all 0.2s ease;
+	margin-bottom: 30px;
 }
 
 .clr-btn:hover {

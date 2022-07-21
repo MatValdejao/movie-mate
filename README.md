@@ -21,7 +21,7 @@ Movie Mate was built using:
 * HTML
 * Materialize CSS Library
 * JavaScript
-* APIs: OMDB API and NYTimes API
+* APIs: [OMDB API](https://www.omdbapi.com/) and [NYTimes API](https://developer.nytimes.com/apis)
 
 ## Initial Mock Up
 
@@ -46,5 +46,4 @@ The deployed application can be found at:
 
 The following resources served as useful references during development:
 * https://codeburst.io/know-your-http-status-a-cheat-sheet-for-http-status-codes-5fb43863e589
-* https://www.omdbapi.com/
-* https://developer.nytimes.com/apis
+* 
