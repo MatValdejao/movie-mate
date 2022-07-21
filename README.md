@@ -29,7 +29,7 @@ Movie Mate was built using:
 
 ## Deployed Application
 
-The deployed application can be found at:
+The deployed application can be found at: https://matvaldejao.github.io/movie-mate/
 
 ![screenshot of deployed application](./assets/images/final-screenshot.png)
 
@@ -46,4 +46,4 @@ The deployed application can be found at:
 
 The following resources served as useful references during development:
 * https://codeburst.io/know-your-http-status-a-cheat-sheet-for-http-status-codes-5fb43863e589
-* 
+* https://www.geeksforgeeks.org/scroll-to-the-top-of-the-page-using-javascript-jquery/
