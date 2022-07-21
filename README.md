@@ -29,7 +29,7 @@ Movie Mate was built using:
 
 ## Deployed Application
 
-The deployed application can be found at:
+The deployed application can be found at: https://matvaldejao.github.io/movie-mate/
 
 ![screenshot of deployed application](./assets/images/final-screenshot.png)
 
