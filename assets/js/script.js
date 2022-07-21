@@ -3,7 +3,7 @@ const apiKey2 = "6EW8DVJ9Y5sGBFMGXfuttZxSHuABvD5A";
 var mainContentEl = document.querySelector(".main-content");
 var submitButtonEl = document.getElementById("submit-btn");
 var movieListEl = document.querySelector(".movie-list");
-var movieTitle = document.querySelector(".movie-title")
+var movieTitle = document.querySelector(".movie-title");
 var searchHistory = [];
 
 var retrieveData = function (movie) {
@@ -53,7 +53,7 @@ var getMovie = function (event) {
 	// retrieves button element text data
 	var movie = inputEl.value.trim();
 	movie = movie.toUpperCase();
-	
+
 	// calls retrieveData function
 	retrieveData(movie);
 
@@ -118,7 +118,7 @@ var carouselItemOne = function (movieData, movie) {
 	// append to page
 	movieTitle.appendChild(movieTitleEl);
 	carouselOneEl.appendChild(releaseDateEl);
-	carouselOneEl.appendChild(ratedEl)
+	carouselOneEl.appendChild(ratedEl);
 };
 
 var carouselItemTwo = function (movieData, movie) {
@@ -129,16 +129,16 @@ var carouselItemTwo = function (movieData, movie) {
 	// remove "Plot" title header
 	var plotTitleEl = document.createElement("h3");
 	plotTitleEl.style.color = "black";
-	plotTitleEl.style.marginBottom = "5vh"
-	plotTitleEl.classList = "carousel-val"
+	plotTitleEl.style.marginBottom = "5vh";
+	plotTitleEl.classList = "carousel-val";
 	plotTitleEl.style.textAlign = "center";
 	plotTitleEl.textContent = "Plot";
 
 	// plot description
 	var plotEl = document.createElement("p");
 	plotEl.style.color = "black";
-	plotEl.style.fontSize = "1.6rem"
-	plotEl.classList = "carousel-val"
+	plotEl.style.fontSize = "1.6rem";
+	plotEl.classList = "carousel-val";
 	plotEl.style.textAlign = "center";
 	// checks whether plot description exists
 	if (movieData.Plot === "N/A") {
@@ -159,15 +159,15 @@ var carouselItemThree = function (reviewData, movie) {
 	// reviews section carousel item
 	var reviewEl = document.createElement("h3");
 	reviewEl.style.color = "black";
-	reviewEl.style.marginBottom = "5vh"
-	reviewEl.classList = "carousel-val"
+	reviewEl.style.marginBottom = "5vh";
+	reviewEl.classList = "carousel-val";
 	reviewEl.style.textAlign = "center";
 	reviewEl.textContent = "Reviews";
 
 	var movieReviewEl = document.createElement("p");
 	movieReviewEl.style.color = "black";
-	movieReviewEl.style.fontSize = "2rem"
-	movieReviewEl.classList = "carousel-val"
+	movieReviewEl.style.fontSize = "2rem";
+	movieReviewEl.classList = "carousel-val";
 	movieReviewEl.style.textAlign = "center";
 	if (reviewData.results === null) {
 		movieReviewEl.textContent = "No review available for " + movie;
@@ -193,21 +193,21 @@ var carouselItemFour = function (movieData, movie) {
 	// cast and awards carousel item
 	var castEl = document.createElement("h3");
 	castEl.style.color = "black";
-	castEl.classList = "carousel-val"
+	castEl.classList = "carousel-val";
 	castEl.style.textAlign = "center";
 	castEl.textContent = "Notable Cast";
 
 	// create list to append each cast person into
 	var actorListEl = document.createElement("ul");
 	var actorsList = movieData.Actors.split(",");
-	actorListEl.classList = "carousel-val"
+	actorListEl.classList = "carousel-val";
 
 	// append actors into cast list
 	for (var i = 0; i < actorsList.length; i++) {
 		var listItemEl = document.createElement("li");
 		listItemEl.textContent = actorsList[i];
 		listItemEl.style.color = "black";
-		listItemEl.style.fontSize = "1.4rem"
+		listItemEl.style.fontSize = "1.4rem";
 		actorListEl.appendChild(listItemEl);
 	}
 
@@ -220,21 +220,21 @@ var carouselItemFour = function (movieData, movie) {
 		var awardsEl = document.createElement("h3");
 		awardsEl.style.color = "black";
 		awardsEl.style.padding = "0px";
-		awardsEl.classList = "carousel-val"
+		awardsEl.classList = "carousel-val";
 		awardsEl.style.textAlign = "center";
 		awardsEl.textContent = "Awards";
 
 		// create list to append each cast person into
 		var awardListEl = document.createElement("ul");
-		awardListEl.classList = "carousel-val"
+		awardListEl.classList = "carousel-val";
 		var awardList = movieData.Awards.split(",");
-	
+
 		// append awards to list
 		for (var i = 0; i < awardList.length; i++) {
 			var listItemEl = document.createElement("li");
 			listItemEl.textContent = awardList[i];
 			listItemEl.style.color = "black";
-			listItemEl.style.fontSize = "1.4rem"
+			listItemEl.style.fontSize = "1.4rem";
 			awardListEl.appendChild(listItemEl);
 		}
 		// append to page when exists
@@ -306,10 +306,9 @@ $(".movie-list").on("click", ".history-btn", function (event) {
 	retrieveData(movie);
 });
 
-
 $(".clr-btn").on("click", function (event) {
 	localStorage.clear();
 	$(".history-btn").remove();
 	searchHistory = [];
 	savedStorage();
-})
+});
