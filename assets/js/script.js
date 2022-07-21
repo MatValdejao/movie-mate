@@ -219,6 +219,7 @@ var carouselItemFour = function (movieData, movie) {
 	if (movieData.Awards !== "N/A") {
 		var awardsEl = document.createElement("h3");
 		awardsEl.style.color = "black";
+		awardsEl.style.padding = "0px";
 		awardsEl.classList = "carousel-val"
 		awardsEl.style.textAlign = "center";
 		awardsEl.textContent = "Awards";
@@ -233,7 +234,6 @@ var carouselItemFour = function (movieData, movie) {
 			var listItemEl = document.createElement("li");
 			listItemEl.textContent = awardList[i];
 			listItemEl.style.color = "black";
-			listItemEl.style.paddingTop = "0"
 			listItemEl.style.fontSize = "1.4rem"
 			awardListEl.appendChild(listItemEl);
 		}
