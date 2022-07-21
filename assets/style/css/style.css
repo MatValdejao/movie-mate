@@ -151,6 +151,30 @@ header a {
     background-repeat: no-repeat;
 }
 
+#pastSearches {
+    margin-left: 2vh;
+    font-size: 1.8rem;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.history-btn {
+    border: outset;
+    background-color:teal;
+    color: white;
+    border-color: teal;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    font-size: 1.5rem;
+}
+
+.history-btn:hover {
+    border:outset;
+    background-color: var(--submit-button-after-color);
+    color: black;
+    border-color: var(--submit-button-after-color);
+}
+
 .history {
     display: flex;
     justify-content: left;

@@ -2,7 +2,8 @@ const apiKey = "1c2cc299";
 const apiKey2 = "6EW8DVJ9Y5sGBFMGXfuttZxSHuABvD5A"
 var mainContentEl = document.querySelector(".main-content");
 var submitButtonEl = document.getElementById("submit-btn");
-
+var movieListEl = document.querySelector(".movie-list");
+var searchHistory = [];
 
 var retrieveData = function (movie) {
 	var apiURL = "http://www.omdbapi.com/?apikey=" + apiKey + "&t=" + movie;
@@ -52,7 +53,9 @@ var getMovie = function (event) {
 };
 
 var displayMovie = function (data2, movie, data) {
-	mainContentEl.style.display = "block"
+	saveMovie(movie);
+
+	mainContentEl.style.display = "block";
 
     var reviewData = data
     console.log(reviewData)
@@ -68,7 +71,7 @@ var displayMovie = function (data2, movie, data) {
     carouselItemFour(movieData, movie);
 };
 
-var carouselItemOne = function (movieData, movie) {
+var carouselItemOne = function (movieData, movie) {	
     // select first carousel item
 	var carouselOneEl = document.querySelector(".item1");
 
@@ -76,12 +79,14 @@ var carouselItemOne = function (movieData, movie) {
 	// move display to the header of the section
 	// add age rating in its place maybe?
 	var movieTitleEl = document.createElement("h3");
+	movieTitleEl.classList = "carousel-val"
 	movieTitleEl.style.color = "black";
 	movieTitleEl.style.textAlign = "center";
 	movieTitleEl.textContent = movie;
-
+	
 	// date movie released, together with movie title carousel
 	var releaseDateEl = document.createElement("h3");
+	releaseDateEl.classList = "carousel-val"
 	releaseDateEl.style.color = "black";
 	releaseDateEl.style.textAlign = "center";
 	var releaseDateSplit = movieData.Released.split(" ");
@@ -201,7 +206,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	mainContentEl.style.display = "none"
 });
 
-submitButtonEl.addEventListener("click", getMovie);
 
 // add "Enter" key as possible input
 var input = document.getElementById("search");
@@ -212,13 +216,55 @@ input.addEventListener("keypress", function(event) {
 	}
 })
 
-var searchHistory = [];
-var movieListEl = document.querySelector(".movie-list");
+var historyButtons = function (movie) {
 
-var pastSearchBtns = function (movie) {
-	var histButtonEl = document.createElement("button")
-	histButtonEl.setAttribute("type", "submit")
-	histButtonEl.classList = "history-btn"
+	// create history button for specific movie
+	var histButtonEl = document.createElement("button");
+	histButtonEl.setAttribute("type", "submit");
+	histButtonEl.classList = "history-btn";
+	movie = movie.toUpperCase();
 	histButtonEl.textContent = movie;
-	movieListEl.appendChild(histButtonEl);
+
+	movieListEl.append(histButtonEl);
+};
+
+var saveMovie = function (movie) {
+	if (searchHistory.indexOf(movie) === -1) {
+		movie = movie.toUpperCase()
+		searchHistory.push(movie);
+
+		// save city to page
+		historyButtons(movie);
+	}
+	localStorage.setItem("movie", searchHistory);
 }
+
+var savedStorage = function () {
+	searchHistory = localStorage.getItem("movie");
+
+	// check whether searchHistory exists
+	if (searchHistory === null) {
+		searchHistory = []
+		return
+	}
+
+	searchHistory = searchHistory.split(",");
+	for (var i = 0; i < searchHistory.length; i++) {
+		historyButtons(searchHistory[i]);
+	}
+}
+
+
+savedStorage();
+
+submitButtonEl.addEventListener("click", getMovie);
+
+// upon historical button click, retrieve that movie's data
+$(".movie-list").on("click", ".history-btn", function (event) {
+	var movie = event.target.textContent;
+
+	retrieveData(movie);
+});
+
+
+
