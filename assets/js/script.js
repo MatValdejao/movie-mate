@@ -58,6 +58,9 @@ var getMovie = function (event) {
 
 	// clear input field
 	inputEl.value = "";
+
+	document.getElementById("pastSearches").style.visibility = "visible";
+	document.getElementById("clear-button-section").style.visibility = "visible";
 };
 
 var displayMovie = function (data2, movie, data) {

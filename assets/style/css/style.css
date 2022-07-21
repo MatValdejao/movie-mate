@@ -193,6 +193,7 @@ header a {
     font-size: 1.8rem;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    visibility: hidden;
 }
 
 .history-btn {
@@ -227,6 +228,7 @@ header a {
     margin-bottom: 5vh;
     display: flex;
     justify-content: center;
+    visibility: hidden;
 }
 
 footer {
