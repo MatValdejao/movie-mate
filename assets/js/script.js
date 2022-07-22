@@ -15,15 +15,16 @@ var retrieveData = function (movie) {
 				res.json().then(function (data) {
 					if (data.Response === "True") {
 						movieReview(data, movie);
-					} else {
-						console.log(data.Error);
+					} else {	
+						createModal();
 					}
 				});
 			}
 		})
 		.catch(function (error) {
 			console.log("Unable to connect to Movies API");
-		s});
+			s;
+		});
 };
 
 var movieReview = function (data2, movie) {
@@ -172,7 +173,7 @@ var carouselItemThree = function (reviewData, movie) {
 	if (reviewData.results === null) {
 		movieReviewEl.textContent = "No review available for " + movie;
 	} else {
-		console.log(reviewData)
+		console.log(reviewData);
 		movieReviewEl.innerHTML =
 			"<a href=" +
 			reviewData.results[0].link.url +
@@ -296,9 +297,10 @@ input.addEventListener("keypress", function (event) {
 	}
 });
 
-savedStorage();
-
-submitButtonEl.addEventListener("click", getMovie);
+var createModal = function () {
+	$(".modal").modal();
+	$(".modal").modal("open")
+};
 
 // upon historical button click, retrieve that movie's data
 $(".movie-list").on("click", ".history-btn", function (event) {
@@ -317,3 +319,7 @@ $(".clr-btn").on("click", function (event) {
 $(".material-icons").on("click", function (event) {
 	document.getElementById("page-top").scrollIntoView();
 });
+
+savedStorage();
+
+submitButtonEl.addEventListener("click", getMovie);
