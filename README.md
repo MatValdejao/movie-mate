@@ -13,6 +13,14 @@ Often times, when discussing movies with friends, we forget many details such as
 * WHEN I am trying to make connections with other humans
 * THEN I expect a short plot and review returned to me in order to include myself in the conversation
 
+## Overview
+
+This is a front-end application only. The application utilizes JavaScript to handle button click events as well as caroussel functionality. Once the user inputs a movie and clicks the "search" button, JavaScript captures the event and movie name and fecthes data via API calls about the searched movie. The data is returned and dynamically created on the website into the caroussel boxes, with each box depicting a different piece of information, for example, one box talks about actors in the movie while another other provides a link to a NY Times review of the movie. The movie title is saved under local storage and displayed for reference. The user can click the saved name of previous mocies to search them again and can also, if they want, clear their search history. 
+
+## Instructions
+
+To open the app click the link in the [Deployed Application](Deployed Application) section. 
+
 ## Technologies Used
 
 Movie Mate was built using:
@@ -26,7 +34,6 @@ Movie Mate was built using:
 ![screenshot of mock up](https://user-images.githubusercontent.com/106041115/179863653-7b051d38-11c7-473b-835b-2541d528bac3.png)
 
 ## Deployed Application
-![MovieMate](https://matvaldejao.github.io/movie-mate/)
 
 The deployed application can be found at: https://matvaldejao.github.io/movie-mate/
 
