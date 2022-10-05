@@ -19,7 +19,7 @@ This is a front-end application only. The application utilizes JavaScript to han
 
 ## Instructions
 
-To open the app click the link in the [Deployed Application](Deployed Application) section. 
+To open the app click the link in the Deployed Application section. 
 
 ## Technologies Used
 
