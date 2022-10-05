@@ -1,10 +1,8 @@
 # Movie Mate
 
-## Description
+## Summary
 
-Movie Mate a search application that allows users to input a movie title and get brief information about the plot, cast, awards won, and reviews.
-
-The app also stores the user’s previous searches so that the user can revisit them if needed.
+Often times, when discussing movies with friends, we forget many details such as actor names. Other times, we are thinking about watching a movie but want to better undstand what they are about and the reviews about the movie. Movie Mate is movie search application that allows users to input a movie title and get brief information about the plot, cast, awards won, and reviews. The app stores previous searches in local storage. 
 
 ## User Story
 
@@ -28,6 +26,7 @@ Movie Mate was built using:
 ![screenshot of mock up](https://user-images.githubusercontent.com/106041115/179863653-7b051d38-11c7-473b-835b-2541d528bac3.png)
 
 ## Deployed Application
+![MovieMate](
 
 The deployed application can be found at: https://matvaldejao.github.io/movie-mate/
 
