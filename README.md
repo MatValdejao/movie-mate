@@ -26,7 +26,7 @@ Movie Mate was built using:
 ![screenshot of mock up](https://user-images.githubusercontent.com/106041115/179863653-7b051d38-11c7-473b-835b-2541d528bac3.png)
 
 ## Deployed Application
-![MovieMate](
+![MovieMate](https://matvaldejao.github.io/movie-mate/)
 
 The deployed application can be found at: https://matvaldejao.github.io/movie-mate/
 
